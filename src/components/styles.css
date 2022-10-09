@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Roboto&family=Secular+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.mainContainer {
+    font-family: 'Open Sans', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 3fr 0.3fr;
+    grid-template-areas: "navbar"
+                         "mainContent"
+                         "footer";
+    min-height: 100vh;
+}
+
+nav {
+    box-shadow: 0 0 1vh #61DAFB;
+    background-color: #21222A;
+    color: #61DAFB;
+    padding: 35px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    transition: 0.2s;
+}
+
+nav.light {
+    background-color: #fff;
+    box-shadow: 0 0 10px black;
+    z-index: 1;
+    transition: 0.2s;
+}
+
+
+
+.toggler {
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.toggler p {
+    font-size: 0.625rem;
+    font-weight: 600;
+}
+
+.toggler--light {
+    color: #2B283A;
+}
+
+.toggler--dark {
+    color: #D5D4D8;
+}
+
+nav.light .toggler--slider {
+    border-color: black;
+    background-color: #F5F5F5;
+}
+
+nav.light .toggler--light {
+    color: #918E9B;
+}
+
+nav.light .toggler-dark {
+    color: black;
+}
+
+nav.light .toggler--slider {
+    justify-content: flex-end;
+    border: 1px solid #fff;
+}
+
+.toggler--slider {
+    width: 25px;
+    height: 13px;
+    background-color: #fff;
+    border-radius: 2rem;
+    margin-inline: 7px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #fff;
+    box-sizing: content-box;
+    transition: 0.2s;
+}
+
+.toggler--slider--circle {
+    height: 13px;
+    width: 13px;
+    background-color: #21222A;
+    border-radius: 50%;
+}
+
+.nav-items {
+    font-size: 1.5em;
+    color: rgb(226, 223, 223);
+    margin-right: 4vw;
+    list-style: none;
+    display: flex;
+    gap: 2vw;
+}
+/* Main Content */
+
+.mainContent {
+    background: url("../images/main-react-logo.png") no-repeat right center;
+    background-color: #282D35;
+    color: white;
+    padding: 60px;
+    font-size: 1.2em;
+    transition: 0.2s;
+}
+
+
+.mainContent ul {
+    margin: 3vw 0 0 3vw;
+}
+
+.mainContent li::marker {
+    color: #61DAFB;
+    font-size: 1.4em;
+    
+}
+
+.mainContent li {
+    margin: 2vh 0;
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.logo {
+    width: 5vw;
+    margin-left: 2vw;
+}
+
+/* Main Content Light */
+
+.mainContentLight {
+    background: url("../images/main-react-logo-light.png") no-repeat right center;
+    background-color: #fff;
+    color: #2B283A;
+    padding: 60px;
+    font-size: 1.2em;
+    transition: 0.2s;
+}
+
+.mainContentLight ul {
+    margin: 3vw 0 0 3vw;
+}
+
+.mainContentLight li::marker {
+    color: #61DAFB;
+    font-size: 1.4em;
+}
+
+.mainContentLight li {
+    margin: 2vh 0;
+    color: #2B283A;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #21222A;
+    color: rgb(226, 223, 223);
+    font-size: 1.2em;
+    display: flex;
+    justify-content: end;
+    padding: 35px;
+    transition: 0.2s;
+}
+
+footer.light {
+    background-color: rgb(207, 205, 205);
+    color: #2B283A;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: end;
+    padding: 35px;
+    transition: 0.2s;
+}
